@@ -38,8 +38,8 @@ public class Trade implements Strategy {
             Variables.timer.restart();
             System.out.println("Reset timer" + Variables.timer.getElapsedTime());
             Time.sleep((int) 500);
-            if (Trading.getOpponentsOffer().length < 2) {
-                Time.sleep(() -> Trading.getOpponentsOffer().length == 2, (int) 5000);
+            if (TradingLocal.getOpponentsOffer().length < 2) {
+                Time.sleep(() -> TradingLocal.getOpponentsOffer().length == 2, (int) 5000);
                 this.acceptTrade();
             } else  {
                 this.acceptTrade();
